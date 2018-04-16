@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B8C8274CD57ECB9F21AB85D /* libPods-EMFDetector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F2D1575B490DC231162690 /* libPods-EMFDetector.a */; };
 		633DBB301C7A61A900C536FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DBB2F1C7A61A900C536FD /* AppDelegate.swift */; };
 		633DBB321C7A61A900C536FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DBB311C7A61A900C536FD /* ViewController.swift */; };
 		633DBB351C7A61A900C536FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633DBB331C7A61A900C536FD /* Main.storyboard */; };
 		633DBB371C7A61A900C536FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 633DBB361C7A61A900C536FD /* Assets.xcassets */; };
 		633DBB3A1C7A61A900C536FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633DBB381C7A61A900C536FD /* LaunchScreen.storyboard */; };
+		633DBB441C7A620000C536FD /* EMF1Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DBB411C7A620000C536FD /* EMF1Helper.swift */; };
+		633DBB451C7A620000C536FD /* EMF2Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DBB421C7A620000C536FD /* EMF2Helper.swift */; };
+		633DBB461C7A620000C536FD /* IEMFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DBB431C7A620000C536FD /* IEMFHelper.swift */; };
+		633DBB531C7A75BE00C536FD /* SoundHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DBB521C7A75BE00C536FD /* SoundHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12F0E346B51E90880E2F5F3C /* Pods-EMFDetector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMFDetector.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMFDetector/Pods-EMFDetector.release.xcconfig"; sourceTree = "<group>"; };
+		27BB16E1E849A362F3C42BEF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		601779F489B9A751832E5FA4 /* Pods-EMFDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMFDetector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMFDetector/Pods-EMFDetector.debug.xcconfig"; sourceTree = "<group>"; };
 		633DBB2C1C7A61A900C536FD /* EMFDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMFDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		633DBB2F1C7A61A900C536FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		633DBB311C7A61A900C536FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,11 @@
 		633DBB361C7A61A900C536FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		633DBB391C7A61A900C536FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		633DBB3B1C7A61A900C536FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		633DBB411C7A620000C536FD /* EMF1Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMF1Helper.swift; sourceTree = "<group>"; };
+		633DBB421C7A620000C536FD /* EMF2Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMF2Helper.swift; sourceTree = "<group>"; };
+		633DBB431C7A620000C536FD /* IEMFHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IEMFHelper.swift; sourceTree = "<group>"; };
+		633DBB521C7A75BE00C536FD /* SoundHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundHelper.swift; sourceTree = "<group>"; };
+		A1F2D1575B490DC231162690 /* libPods-EMFDetector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMFDetector.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +42,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8C8274CD57ECB9F21AB85D /* libPods-EMFDetector.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5564553C4173A78B7E775FF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27BB16E1E849A362F3C42BEF /* Pods.framework */,
+				A1F2D1575B490DC231162690 /* libPods-EMFDetector.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		633DBB231C7A61A900C536FD = {
 			isa = PBXGroup;
 			children = (
 				633DBB2E1C7A61A900C536FD /* EMFDetector */,
 				633DBB2D1C7A61A900C536FD /* Products */,
+				5564553C4173A78B7E775FF7 /* Frameworks */,
+				72AEAA76A013D644D7B177F3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +79,7 @@
 		633DBB2E1C7A61A900C536FD /* EMFDetector */ = {
 			isa = PBXGroup;
 			children = (
+				633DBB471C7A620600C536FD /* EMFHelper */,
 				633DBB2F1C7A61A900C536FD /* AppDelegate.swift */,
 				633DBB311C7A61A900C536FD /* ViewController.swift */,
 				633DBB331C7A61A900C536FD /* Main.storyboard */,
@@ -64,6 +90,26 @@
 			path = EMFDetector;
 			sourceTree = "<group>";
 		};
+		633DBB471C7A620600C536FD /* EMFHelper */ = {
+			isa = PBXGroup;
+			children = (
+				633DBB521C7A75BE00C536FD /* SoundHelper.swift */,
+				633DBB411C7A620000C536FD /* EMF1Helper.swift */,
+				633DBB421C7A620000C536FD /* EMF2Helper.swift */,
+				633DBB431C7A620000C536FD /* IEMFHelper.swift */,
+			);
+			name = EMFHelper;
+			sourceTree = "<group>";
+		};
+		72AEAA76A013D644D7B177F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				601779F489B9A751832E5FA4 /* Pods-EMFDetector.debug.xcconfig */,
+				12F0E346B51E90880E2F5F3C /* Pods-EMFDetector.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +117,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 633DBB3E1C7A61A900C536FD /* Build configuration list for PBXNativeTarget "EMFDetector" */;
 			buildPhases = (
+				42BC41C65529881E7750872D /* [CP] Check Pods Manifest.lock */,
 				633DBB281C7A61A900C536FD /* Sources */,
 				633DBB291C7A61A900C536FD /* Frameworks */,
 				633DBB2A1C7A61A900C536FD /* Resources */,
@@ -91,11 +138,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Dodongdude;
 				TargetAttributes = {
 					633DBB2B1C7A61A900C536FD = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = TBSTK984R6;
 					};
 				};
 			};
@@ -130,12 +178,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42BC41C65529881E7750872D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EMFDetector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		633DBB281C7A61A900C536FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633DBB461C7A620000C536FD /* IEMFHelper.swift in Sources */,
+				633DBB531C7A75BE00C536FD /* SoundHelper.swift in Sources */,
 				633DBB321C7A61A900C536FD /* ViewController.swift in Sources */,
+				633DBB451C7A620000C536FD /* EMF2Helper.swift in Sources */,
+				633DBB441C7A620000C536FD /* EMF1Helper.swift in Sources */,
 				633DBB301C7A61A900C536FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,13 +243,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -215,13 +298,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -240,6 +333,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -247,23 +341,31 @@
 		};
 		633DBB3F1C7A61A900C536FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 601779F489B9A751832E5FA4 /* Pods-EMFDetector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TBSTK984R6;
 				INFOPLIST_FILE = EMFDetector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dodongdude.EMFDetector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		633DBB401C7A61A900C536FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12F0E346B51E90880E2F5F3C /* Pods-EMFDetector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TBSTK984R6;
 				INFOPLIST_FILE = EMFDetector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Dodongdude.EMFDetector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -286,6 +388,7 @@
 				633DBB401C7A61A900C536FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

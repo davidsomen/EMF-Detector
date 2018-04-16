@@ -26,13 +26,13 @@ class EMF1Helper: NSObject, IEMFHelper
     
     func start()
     {
-        motionManager.startMagnetometerUpdatesToQueue(NSOperationQueue.currentQueue()!)
+        motionManager.startMagnetometerUpdates(to: OperationQueue.current!)
         {
             data, error in
             
             guard let data = data else { return }
             
-            self.handleMagneticField(data.magneticField)
+            self.handleMagneticField(field: data.magneticField)
         }
     }
     
@@ -49,7 +49,7 @@ class EMF1Helper: NSObject, IEMFHelper
     
     private func handleMagneticField(field: CMMagneticField)
     {
-        let magnitude = magnitude3D(field.x, field.y, field.z)
+        let magnitude = magnitude3D(x: field.x, field.y, field.z)
         
         minMagnitude = min(magnitude, minMagnitude)
         maxMagnitude = max(magnitude, maxMagnitude)
@@ -60,7 +60,7 @@ class EMF1Helper: NSObject, IEMFHelper
         
         if c.isNaN { c = 0 }
         
-        self.delegate?.strengthUpdated(c)
+        self.delegate?.strengthUpdated(strength: c)
     }
     
     private func magnitude3D(x: Double, _ y: Double, _ z: Double) -> Double

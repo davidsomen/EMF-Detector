@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EZAudio
+import AudioKit
 
 private enum SoundHelperType
 {
@@ -17,7 +17,7 @@ private enum SoundHelperType
 
 class SoundHelper: NSObject, EZOutputDataSource
 {
-    private let twoPi = Float(2.0 * M_PI)
+    private let twoPi = Float(2.0 * Double.pi)
     private let kSampleRate: Float = 44100
     private let kMaxFrequency: Float = 880
     private let kMinFrequency: Float = 0
@@ -45,8 +45,8 @@ class SoundHelper: NSObject, EZOutputDataSource
     
     private func setupOutput()
     {
-        let inputFormat = EZAudioUtilities.monoFloatFormatWithSampleRate(kSampleRate)
-        output = EZOutput(dataSource: self, withAudioStreamBasicDescription: inputFormat)
+        let inputFormat = EZAudioUtilities.monoFloatFormat(withSampleRate: kSampleRate)
+        output = EZOutput(dataSource: self, inputFormat: inputFormat)
     }
     
     func start()
@@ -59,15 +59,17 @@ class SoundHelper: NSObject, EZOutputDataSource
         output.stopPlayback()
     }
     
-    func output(output: EZOutput!, shouldFillAudioBufferList audioBufferList: UnsafeMutablePointer<AudioBufferList>, withNumberOfFrames frames: UInt32)
+    func output(_ output: EZOutput!, shouldFill audioBufferList: UnsafeMutablePointer<AudioBufferList>!, withNumberOfFrames frames: UInt32, timestamp: UnsafePointer<AudioTimeStamp>!) -> OSStatus
     {
-        let abl = UnsafeMutableAudioBufferListPointer(audioBufferList)
+        let abl = UnsafeMutableAudioBufferListPointer(audioBufferList)!
         let buffer = abl.first!.mData
         
         var theta = self.theta
         let thetaIncrement = twoPi * frequency / kSampleRate
         
-        let pbuffer = UnsafeMutablePointer<Float>(buffer)
+        let pbuffer = buffer!.assumingMemoryBound(to: Float.self)
+        
+        //let pbuffer = UnsafeMutablePointer<Float>(buffer)
         let frames = Int(frames)
         
         if type == .Sine
@@ -88,7 +90,7 @@ class SoundHelper: NSObject, EZOutputDataSource
         {
             for frame in 0..<frames
             {
-                pbuffer[Int(frame)] = self.amplitude * EZAudioUtilities.SGN(theta)
+                pbuffer[Int(frame)] = self.amplitude * EZAudioUtilities.sgn(theta)
                 theta += thetaIncrement
                 if theta > twoPi
                 {
@@ -104,5 +106,7 @@ class SoundHelper: NSObject, EZOutputDataSource
             
             memset(buffer, 0, Int(bufferByteSize))
         }
+        
+        return 0
     }
 }

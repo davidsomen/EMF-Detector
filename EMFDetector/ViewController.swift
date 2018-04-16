@@ -25,7 +25,7 @@ class ViewController: UIViewController, EMFHelperDelegate
         emfHelper.delegate = self
     }
     
-    override func viewDidAppear(animated: Bool)
+    override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
         
@@ -33,19 +33,14 @@ class ViewController: UIViewController, EMFHelperDelegate
         soundHelper.start()
     }
     
-    override func viewDidDisappear(animated: Bool)
+    override func viewDidDisappear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
         
         emfHelper.stop()
         soundHelper.stop()
     }
-    
-    override func prefersStatusBarHidden() -> Bool
-    {
-        return true
-    }
-    
+
     func strengthUpdated(strength: Double)
     {
         levelLabel.text = String(format:"%.3f", strength)

@@ -1,0 +1,18 @@
+PODS:
+  - AudioKit (4.2.3):
+    - AudioKit/UI (= 4.2.3)
+  - AudioKit/UI (4.2.3)
+
+DEPENDENCIES:
+  - AudioKit (~> 4.2)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AudioKit
+
+SPEC CHECKSUMS:
+  AudioKit: 65e0035ce267446932ac733257053ac97dfe395e
+
+PODFILE CHECKSUM: 9f6f23fcc41e67af5e6f65014bd4ee492f2d0661
+
+COCOAPODS: 1.5.0

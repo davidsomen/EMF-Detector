@@ -32,10 +32,10 @@ class EMF2Helper: NSObject, CLLocationManagerDelegate
         locationManager.stopUpdatingHeading()
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading)
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading)
     {
         let magnitude = sqrt(pow(newHeading.x, 2) + pow(newHeading.y, 2) + pow(newHeading.z, 2))
         
-        delegate?.strengthUpdated(magnitude)
+        delegate?.strengthUpdated(strength: magnitude)
     }
 }
